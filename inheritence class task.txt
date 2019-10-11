@@ -1,0 +1,37 @@
+ class Student{
+      constructor(name,fname,Age)
+      {  this.name=name;
+          this.fname=fname;
+           this.Age=Age;}
+           printdetail()
+           { console.log(this.name+"   "+this.fname+"  "+this.Age);}
+
+}
+
+           class csStudent extends Student{
+            constructor(name,fname,Age,fyptitle)
+            {super(name,fname,Age);
+              this.fyptitle=fyptitle;}
+
+              set fyptitle(newfyptitle)
+              {  this.fyptitle=newfyptitle;}
+
+              get fyptitle()
+              {return fyptitle;}
+
+            
+            printdetail()
+           { console.log(this.fyptitle);}
+}
+
+           
+           class mgmtStudent extends Student{
+            constructor(name,fname,Age,industryname)
+            { super(name,fname,Age);
+                this.industryname=industryname;
+              }
+}
+
+              let  user=new mgmtStudent("ali","ashir",23,"fecto");
+              console.log(user.industryname);
+                console.log(user);
